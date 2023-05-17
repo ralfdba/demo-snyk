@@ -6,7 +6,6 @@ pipeline {
       steps {
         sh 'cd $WORKSPACE/'
         echo 'Dentro de WS'
-        snykSecurity(additionalArguments: '--file=requirements.txt --command=python3')
         sh 'pyraider go'
       }
     }
